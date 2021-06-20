@@ -34,7 +34,6 @@ func main() {
 	}
 
 	arr := []string{"foo", "bar", "jon", "doe"}
-
 	for index, value := range arr {
 		fmt.Println("index: ", index, "value: ", value)
 	}
