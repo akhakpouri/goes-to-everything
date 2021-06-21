@@ -4,6 +4,9 @@ import (
 	"errors"
 	"fmt"
 	"math"
+
+	"github.com/akhakpouri/goes-to-everything/settings"
+	"github.com/google/go-cmp/cmp"
 )
 
 func main() {
@@ -43,6 +46,7 @@ func main() {
 	table["bar"] = 2
 	table["jon"] = 3
 	table["doe"] = 4
+	table["yo"] = 5
 
 	for key, value := range table {
 		fmt.Println("key: ", key, "value: ", value)
@@ -56,6 +60,9 @@ func main() {
 	} else {
 		fmt.Println(sq)
 	}
+
+	fmt.Println(settings.ReverseRunes("!oG, olleH"))
+	fmt.Println(cmp.Diff("Hellow World", "Hello Go"))
 }
 
 func sum(x int, y int) int {
