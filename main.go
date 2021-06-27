@@ -5,11 +5,16 @@ import (
 	"fmt"
 	"math"
 
+	"github.com/akhakpouri/goes-to-everything/helpers"
+	"github.com/akhakpouri/goes-to-everything/logging"
 	"github.com/akhakpouri/goes-to-everything/settings"
 	"github.com/google/go-cmp/cmp"
 )
 
 func main() {
+	logging.Debug(true)
+
+	logging.Log("Start of Application")
 	x := 5
 	y := 7
 	sumReg := x + y
@@ -61,8 +66,15 @@ func main() {
 		fmt.Println(sq)
 	}
 
+	muliply := helpers.Multiply(6, 8)
+	xSplit, ySplit := helpers.Split(17)
+
 	fmt.Println(settings.ReverseRunes("!oG, olleH"))
 	fmt.Println(cmp.Diff("Hellow World", "Hello Go"))
+	fmt.Println("muliply is: ", muliply)
+	fmt.Println("x split is ", xSplit, "y split is", ySplit)
+
+	logging.Log("End of Application")
 }
 
 func sum(x int, y int) int {
