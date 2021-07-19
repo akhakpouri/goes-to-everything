@@ -1,6 +1,6 @@
 package models
 
-type iGun interface {
+type IGun interface {
 	SetName(name string)
 	SetPower(power int)
 	GetName() string
