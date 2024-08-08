@@ -1,9 +1,15 @@
 package helpers
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func Multiply(x, y int) int {
-	return x * y
+func Multiply(x int, y int) (int, error) {
+	if x == 0 || y == 0 {
+		return 0, errors.New("both x & y must be greater than 0")
+	}
+	return x * y, nil
 }
 
 func Split(num int) (x, y int) {

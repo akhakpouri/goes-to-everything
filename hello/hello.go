@@ -3,6 +3,7 @@ package main
 import (
 	"example/greetings"
 	"fmt"
+	"helpers"
 	"log"
 )
 
@@ -13,5 +14,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	x := helpers.Multiply(1, 5)
+
 	fmt.Println(message)
+	fmt.Println(x)
 }
