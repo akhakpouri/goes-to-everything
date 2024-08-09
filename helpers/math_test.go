@@ -25,3 +25,8 @@ func TestMultiplyFail(t *testing.T) {
 		t.Fatalf("multiply(%v, %v) got '%v' error", x, y, err)
 	}
 }
+
+func TestRandNum(t *testing.T) {
+	num := GetRandNum()
+	t.Logf("number is: %v", num)
+}

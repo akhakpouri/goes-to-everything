@@ -2,7 +2,7 @@ package helpers
 
 import (
 	"errors"
-	"fmt"
+	"math/rand/v2"
 )
 
 func Multiply(x int, y int) (int, error) {
@@ -18,6 +18,18 @@ func Split(num int) (x, y int) {
 	return
 }
 
-func PrintSlices(s string, x []int) {
-	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
+func GetRandNum() int {
+	numbers := []int{}
+
+	for i := 0; i <= 2500; i++ {
+		if i%2 == 0 || i%3 == 0 {
+			numbers = append(numbers, i)
+		}
+		if i%5 == 0 || i%8 == 0 {
+			continue
+		}
+	}
+
+	len, min := len(numbers), 1
+	return rand.IntN(len-min) + min
 }

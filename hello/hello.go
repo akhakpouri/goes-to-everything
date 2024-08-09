@@ -14,9 +14,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	x := helpers.Multiply(1, 5)
-
 	fmt.Println(message)
+
+	x, err := helpers.Multiply(1, 5)
+
+	if x == 0 || err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println(x)
 }
