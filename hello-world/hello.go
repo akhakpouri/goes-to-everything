@@ -1,5 +1,11 @@
 package learning
 
+const helloPrefix = "hello, "
+
 func SayHello(universe string) string {
-	return "hello, " + universe
+	if universe == "" {
+		universe = "world"
+	}
+
+	return helloPrefix + universe
 }
