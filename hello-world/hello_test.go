@@ -4,13 +4,13 @@ import "testing"
 
 func TestHello(t *testing.T) {
 	t.Run("saying hello to people", func(t *testing.T) {
-		got := SayHello("Ali")
+		got := SayHello("Ali", "english")
 		want := "hello, Ali"
 		assertMessage(t, got, want)
 	})
 	t.Run("saying 'hello, world' when an empty string is provided", func(t *testing.T) {
-		got := SayHello("")
-		want := "hello, world"
+		got := SayHello("", "spanish")
+		want := "holla, world"
 		assertMessage(t, got, want)
 	})
 }
