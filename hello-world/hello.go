@@ -9,18 +9,21 @@ const (
 )
 
 func SayHello(universe, language string) string {
-	prefix := englishPrefix
+	if universe == "" {
+		universe = "world"
+	}
+	return greeting(language) + universe
+}
+
+func greeting(language string) (prefix string) {
 
 	switch language {
 	case spanish:
 		prefix = spanishPrefix
 	case french:
 		prefix = frenchPrefix
+	default:
+		prefix = englishPrefix
 	}
-
-	if universe == "" {
-		universe = "world"
-	}
-
-	return prefix + universe
+	return
 }

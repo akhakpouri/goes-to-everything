@@ -4,5 +4,7 @@ use (
 	.
 	./generics
 	./hello-world
+	./integers
 	./universe
+	./iteration
 )
